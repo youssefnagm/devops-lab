@@ -1,0 +1,11 @@
+name: Check sites
+
+on: [push]
+
+jobs:
+  run-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run site checker
+        run: python3 check_sites.py
